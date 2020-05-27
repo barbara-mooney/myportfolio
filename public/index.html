@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Barbara Mooney</title>
+    <meta name='description' content='My personal portfolio'>
+    <meta name='author' content='Barbara Mooney'>
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x=icon'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <div class='box'>
+      <div class='coverpic' style='background-image: url(./assets/beachpic.jpg)' alt='cover picture'></div>
+      <header>
+        <nav>
+          <ul class='navbar'>
+            <li class='navitem' id='home'>Home</li>
+            <li class='navitem' id='about'>About me</li>
+            <li class='navitem' id='projects'>Projects</li>
+            <li class='navitem' id='contact'>Contact me</li>
+          </ul>
+        </nav>
+      </header>
+      <div class='mainbox'>
+        <div class='innermainbox'>
+          <h1 class='myname'>Barbara Mooney</h1>
+          <h2 class='mytitle'>Full Stack Developer</h2>
+          <p class='socialmedia'>
+            <a href='https://github.com/barbara-mooney' target='_blank' alt='GitHub icon'>
+              <span>
+                <i class="fa fa-github" aria-hidden="true"></i>
+                </span>
+            </a>
+            <a href='https://linkedin.com/in/barbaramooney' target='_blank' alt='Linkedin icon'>
+              <span>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </span>
+            </a>
+            <a href='./assets/Barbara Mooney_Resume.pdf' target='_blank' alt='Resume icon'>
+              <span>
+                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 class='sectiontitle'>ABOUT ME</h3>
+      <div class='grid-wrapperaboutme'>
+        <div class='grid-itemaboutme'><img src='./assets/mypicture.jpg' alt='picture of Barbara Mooney' class='mypicture'></div>
+        <div class='grid-itemaboutme'>
+          <p class='aboutmeparag'>Hi! I'm Barbara, a full-stack developer based out of San Diego, California. Street Eats is a mobile app for foodies in the San Diego area; food truck owners can broadcast their food trucks on the app and customers can locate them in real time. This app was built with React Native, Expo, Node.js, Express, MongoDB and Loopback. View project onStreet Eats is a mobile app for foodies in the San Diego area; food truck owners can broadcast their food trucks on the app and customers can locate them in real time. This app was built with React Native, Expo, Node.js, Express, MongoDB and Loopback. View project onStreet Eats is a mobile app for foodies in the San Diego aStreet Eats is a mobile app for foodies in the San Diego area; food truck owners can broadcast their food trucks on the app and customers can locate them in real time. </p> 
+          </div>
+      </div>
+    </div>
+    <div>
+      <h3 class='sectiontitle'>PROJECTS</h3>
+      <div class='grid-wrapper'>
+        <div class='grid-item'>
+          <p class='projecttitle'>Street Eats: the food truck locator</p>
+          <p class='projectdescription'>Street Eats is a mobile app for food truck lovers in the San Diego area. Owners can broadcast their food trucks on the app and customers can locate them in real time. This app was built with React Native, Expo, Node.js, Express, MongoDB and Loopback. View project on <a href='' alt='Link to GitHub repo' class='linktoproject'>GitHub</a>.
+          </p>
+        </div>
+        <div class='grid-item'>
+          <p class='projecttitle'>Face recognition web app</p>
+          <p class='projectdescription'>This app allows users to register and upload pictures, and utilizes the Clarify API to identify the faces on them. This app was built with React, Node.js, Express and Postgres SQL. View project on <a href='' alt='Link to GitHub repo' class='linktoproject'>Heroku</a>.
+          </p>
+        </div>
+        <div class='grid-item'>
+          <p class='projecttitle'>To-do app</p>
+          <p class='projectdescription'>This is a simple to-do app that allows users to add, prioritize, edit and delete tasks. This app was built with React. View project on <a href='https://to-doapp-barbaramooney.herokuapp.com/' alt='Link to GitHub repo' class='linktoproject'>Heroku</a>.
+          </p>
+        </div>
+      </div> 
+    </div>  
+    <div class='form-div'>
+      <form action="http://localhost:3000/submit" method="POST">
+        <h3 class='formtitle' id='contactsection'>CONTACT ME</h3>
+        <label for='name' class='formlabel'>Name:</label>
+        <input class='forminput' type='text' name='name' required>
+        <label for='email' class='formlabel'>Email:</label>
+        <input class='forminput' type='text' name='email' required>
+        <label for='message' class='formlabel'>Message:</label>
+        <textarea class='message' type='text' name='message' style='height: 175px' required></textarea>
+        <div style='text-align: center'>
+          <input type='submit' value='Send message' class='submitbtn' onsubmit=>
+        </div>
+      </form>
+    </div>
+    <p class='socialmedia' style='text-align: center'>
+      <a href='https://github.com/barbara-mooney' target='_blank'>
+        <span style='display: inline-block'>
+          <i class="fa fa-github" aria-hidden="true"></i>
+          </span>
+      </a>
+      <a href='https://linkedin.com/in/barbaramooney' target='_blank'>
+        <span>
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </span>
+      </a>
+      <a href='./assets/Barbara Mooney_Resume.pdf' target='_blank' alt='Resume icon'>
+        <span>
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+        </span>
+      </a>
+    </p>
+    <footer>
+      All rights reserved by Barbara Mooney © 2020
+    </footer>
+    
+    <script src='script.js'></script>
+  </body>
+</html>
