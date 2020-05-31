@@ -17,7 +17,7 @@ div {
   background: #f9f9fb;
   border-bottom: 1px solid #e5e7e9;
   height: 60vh;
-  margin: 0 0 3.33333rem;
+  margin: 0 0 5rem 0;
   position: relative;
 }
 
@@ -64,10 +64,7 @@ li {
 }
 
 .mainbox {
-  margin-top: 6rem;
-}
-
-.innermainbox {
+  margin-top: 16vh;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -76,25 +73,38 @@ li {
 .myname {
   font-family: Montserrat;
   color: black;
-  font-size: 2.5rem;
+  font-weight: bold;
+  font-size: 3rem;
   padding: 2rem;
   margin-bottom: 2rem;
-  font-weight: bold;
 }
 
 .mytitle {
   font-family: Quicksand;
   color: black;
-  font-size: 1.35rem;
+  font-size: 2rem;
+  margin-bottom: 2vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .myname {
+    font-size: 2rem;
+  }
+  .mainbox {
+    margin-top: 5vh;
+  }
+  .mytitle {
+    font-size: 1rem;
+  }
 }
 
 .hrline {
   border: 0;
-  height: 1;
-  border-top: 1px solid lightgrey;
+  height: 1px;
   width: 75%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-image: linear-gradient(to right, white, rgba(0,0,0,.1), white);
 }
 
 .grid-wrapperaboutme {
@@ -102,16 +112,11 @@ li {
   grid-gap: 20px;
   grid-template-columns: auto 2.5fr;
   grid-template-rows: minmax(12rem, auto);
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 50%;
   margin-bottom: 2rem;
   justify-items: center;
-}
-
-.aboutmesection {
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
 }
 
 .aboutmesection {
@@ -125,8 +130,8 @@ li {
   font-size: 0.8rem; 
   color: #2f313d;
   line-height: 1.5;
-  margin-left: 200px;
-  margin-right: 200px
+  margin-left: 20vh;
+  margin-right: 20vh;
 }
 
 .mypicture > .item-gridaboutme {
@@ -144,7 +149,7 @@ li {
 
 .mypicture {
   object-fit: cover;
-  height: 12rem;
+  height: 30vh;
   margin-left: auto;
 }
 
@@ -154,15 +159,20 @@ li {
   text-align: justify
 }
 
+.gridforprojects {
+  justify-items: center
+}
+
 .grid-wrapper {
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  grid-template-columns: repeat(3, auto);
   grid-template-rows: auto;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
   margin-bottom: 2rem;
   justify-items: center;
+  text-align: center
 }
 
 .grid-item > img {
@@ -170,11 +180,11 @@ li {
 }
 
 .grid-item {
-  display: grid;
+  /* display: grid; */
   width: 90%;
   height: auto;
   background-color: white;
-  margin: 5;
+  /* margin: 5; */
   padding: 10px;
   box-shadow: 4px 4px 5px #888888;
 }
@@ -254,6 +264,16 @@ li {
   margin-bottom: 3rem
 }
 
+.contacttitle{
+  font-family: Montserrat;
+  color: #2f313d;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 0rem;
+  font-weight: bolder
+}
+
 input[type=text], textarea {
   width: 100%;
   padding: 10px;
@@ -287,8 +307,7 @@ input[type=submit]:hover {
 
 .form-div {
   text-align: center;
-  /* margin-top: 3rem;
-  margin-bottom: 4rem; */
+  margin-top: 0
 }
 
 .formtitle {
@@ -297,16 +316,16 @@ input[type=submit]:hover {
   font-size: 1rem;
   margin-bottom: 1rem;
   text-align: center;
-  margin-top: 1rem;
 }
 
 form {
-  width: 55%;
+  width: 40%;
   display: inline-block;
-  padding: 20px;
-  background-color: #F9F9FB;
+  padding: 0 20px;
+  /* background-color: #F9F9FB; */
   text-align: left;
-  border-radius: 5px
+  border-radius: 5px;
+  margin-top: 0
 }
 
 .formlabel {
@@ -322,13 +341,25 @@ form {
 .submitbtn {
   font-family: Quicksand;
   color: white;
-  width: 35%;
+  width: 7rem;
   background-color: #2f313d
 }
 
 .submitbtn:hover {
   color: #2988BC;
   cursor: pointer
+}
+
+.socialmediafooter a {
+  margin-top: 5rem;
+  border-radius: 100%;
+  color: #535358;
+  display: inline-block;
+  font-size: 14px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 10px;
 }
 
 footer {

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Barbara Mooney</title>
+    <meta name='description' content='My personal portfolio'>
+    <meta name='author' content='Barbara Mooney'>
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x=icon'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='styleprojects.css'>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class='navbar'>
+          <li class='navlink'><a href='index.html' class='navitem'>Back to homepage</a></li>
+          <li class='navlink push' id='contact'><a href='index.html#contactsection' class='navitem'>Contact me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class='projectpagecontainer'>
+      <h3 class='sectiontitle'>To-do app: keep track of all your stuff</h3>
+      <p class='projectdescription'>This simple to-do app allows you to keep track of all your tasks by performing all four CRUD operations - create, read, update and delete. This app was built with React and Node.js using a Bootstrap template. You can play with the app on <a href='https://github.com/barbara-mooney/to-do-App-with-React' alt='link to to-do app' target='_blank' class='linktoproject'>Heroku</a> or view the GitHub repo <a href='https://github.com/barbara-mooney/street-eats' alt='Link to the to-do app GitHub repo' target='_blank' class='linktoproject'>here</a>.</p>
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="./assets/todoapp.PNG" class='mySlidePicTodo'>
+        </div>
+        <div class="mySlides fade">
+          <img src="./assets/todoitems.png" class='mySlidePicTodo'>
+        </div>
+        <div class="mySlides fade">
+          <img src="./assets/todoedititem.png" class='mySlidePicTodo'>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    <p class='socialmedia' style='text-align: center'>
+      <a href='https://github.com/barbara-mooney' target='_blank'>
+        <span style='display: inline-block'>
+          <i class="fa fa-github" aria-hidden="true"></i>
+          </span>
+      </a>
+      <a href='https://linkedin.com/in/barbaramooney' target='_blank'>
+        <span>
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </span>
+      </a>
+      <a href='./assets/Barbara Mooney_Resume.pdf' target='_blank' alt='Resume icon'>
+        <span>
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+        </span>
+      </a>
+    </p>
+    <footer>
+      Barbara Mooney © 2020
+    </footer>
+    <script src='script.js'></script>
+  </body>
+</html>

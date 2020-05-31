@@ -5,6 +5,7 @@
     <title>Barbara Mooney</title>
     <meta name='description' content='My personal portfolio'>
     <meta name='author' content='Barbara Mooney'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='shortcut icon' href='/favicon.ico' type='image/x=icon'>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
@@ -22,18 +23,14 @@
       <header>
         <nav>
           <ul class='navbar'>
-            <li class='navitem' id='home'>Home</li>
-            <li class='navitem' id='about'>About me</li>
-            <li class='navitem' id='projects'>Projects</li>
-            <li class='navitem' id='contact'>Contact me</li>
+            <li class='navlink push' id='contact'><a href='#contactsection' class='navitem'>Contact me</a></li>
           </ul>
         </nav>
       </header>
       <div class='mainbox'>
-        <div class='innermainbox'>
-          <h1 class='myname'>Barbara Mooney</h1>
-          <h2 class='mytitle'>Full Stack Developer</h2>
-          <p class='socialmedia'>
+          <div class='myname'>Barbara Mooney</div>
+          <div class='mytitle'>Full Stack Developer</div>
+          <div class='socialmedia'>
             <a href='https://github.com/barbara-mooney' target='_blank' alt='GitHub icon'>
               <span>
                 <i class="fa fa-github" aria-hidden="true"></i>
@@ -49,42 +46,45 @@
                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
               </span>
             </a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <h3 class='sectiontitle'>ABOUT ME</h3>
-      <div class='grid-wrapperaboutme'>
-        <div class='grid-itemaboutme'><img src='./assets/mypicture.jpg' alt='picture of Barbara Mooney' class='mypicture'></div>
-        <div class='grid-itemaboutme'>
-          <p class='aboutmeparag'>Hi! I'm Barbara, a full-stack developer based out of San Diego, California. Street Eats is a mobile app for foodies in the San Diego area; food truck owners can broadcast their food trucks on the app and customers can locate them in real time. This app was built with React Native, Expo, Node.js, Express, MongoDB and Loopback. View project onStreet Eats is a mobile app for foodies in the San Diego area; food truck owners can broadcast their food trucks on the app and customers can locate them in real time. This app was built with React Native, Expo, Node.js, Express, MongoDB and Loopback. View project onStreet Eats is a mobile app for foodies in the San Diego aStreet Eats is a mobile app for foodies in the San Diego area; food truck owners can broadcast their food trucks on the app and customers can locate them in real time. </p> 
           </div>
       </div>
     </div>
     <div>
-      <h3 class='sectiontitle'>PROJECTS</h3>
+      <h3 class='sectiontitle' id='about'>ABOUT ME</h3>
+      <div class='grid-wrapperaboutme'>
+        <div class='grid-itemaboutme'><img src='./assets/mypicture.jpg' alt='picture of Barbara Mooney' class='mypicture'></div>
+        <div class='grid-itemaboutme'>
+          <p class='aboutmeparag'>Hi! I'm Barbara, a full-stack developer based out of San Diego, California. 
+         </p> 
+          </div>
+      </div>
+    </div>
+    <hr class='hrline'>
+    <div class='gridforprojects'>
+      <h3 class='sectiontitle' id='projects'>PROJECTS</h3>
       <div class='grid-wrapper'>
         <div class='grid-item'>
           <p class='projecttitle'>Street Eats: the food truck locator</p>
-          <p class='projectdescription'>Street Eats is a mobile app for food truck lovers in the San Diego area. Owners can broadcast their food trucks on the app and customers can locate them in real time. This app was built with React Native, Expo, Node.js, Express, MongoDB and Loopback. View project on <a href='' alt='Link to GitHub repo' class='linktoproject'>GitHub</a>.
+          <p class='projectdescription'>Street Eats is a mobile app for food truck lovers in the San Diego area. This app was built with React Native, Expo, Node.js, Express, MongoDB and Loopback. View more details <a href='streeteats.html' alt='Link to Street Eats project page' class='linktoproject'>here</a>.
           </p>
         </div>
         <div class='grid-item'>
-          <p class='projecttitle'>Face recognition web app</p>
-          <p class='projectdescription'>This app allows users to register and upload pictures, and utilizes the Clarify API to identify the faces on them. This app was built with React, Node.js, Express and Postgres SQL. View project on <a href='' alt='Link to GitHub repo' class='linktoproject'>Heroku</a>.
+          <p class='projecttitle'>To-do app: keep track of all your stuff</p>
+          <p class='projectdescription'>This is a simple to-do app that allows users to add, prioritize, edit and delete tasks. This app was built with React. View more details <a href='todoapp.html' alt='Link to the to-do app project page' class='linktoproject'>here</a>.
           </p>
         </div>
         <div class='grid-item'>
-          <p class='projecttitle'>To-do app</p>
-          <p class='projectdescription'>This is a simple to-do app that allows users to add, prioritize, edit and delete tasks. This app was built with React. View project on <a href='https://to-doapp-barbaramooney.herokuapp.com/' alt='Link to GitHub repo' class='linktoproject'>Heroku</a>.
+          <p class='projecttitle'>Change calculator: how much is due?</p>
+          <p class='projectdescription'>This is a simple change calculator built with React that calculates the change due for any given transaction. View more details <a href='changecalculator.html' alt='Link to the change calculator project page' class='linktoproject'>here</a>.
           </p>
         </div>
       </div> 
-    </div>  
+    </div> 
+    <hr class='hrline'> 
     <div class='form-div'>
       <form action="http://localhost:3000/submit" method="POST">
-        <h3 class='formtitle' id='contactsection'>CONTACT ME</h3>
+        <div class='contacttitle' id='contactsection'>CONTACT ME</div>
+        <div class='formlabel'>Please feel free to contact me. I would love to connect and discuss new opportunities and projects!</div></br>
         <label for='name' class='formlabel'>Name:</label>
         <input class='forminput' type='text' name='name' required>
         <label for='email' class='formlabel'>Email:</label>
@@ -92,11 +92,11 @@
         <label for='message' class='formlabel'>Message:</label>
         <textarea class='message' type='text' name='message' style='height: 175px' required></textarea>
         <div style='text-align: center'>
-          <input type='submit' value='Send message' class='submitbtn' onsubmit=>
+          <input type='submit' value='Send' class='submitbtn' onsubmit=>
         </div>
       </form>
     </div>
-    <p class='socialmedia' style='text-align: center'>
+    <p class='socialmediafooter' style='text-align: center'>
       <a href='https://github.com/barbara-mooney' target='_blank'>
         <span style='display: inline-block'>
           <i class="fa fa-github" aria-hidden="true"></i>
@@ -114,9 +114,16 @@
       </a>
     </p>
     <footer>
-      All rights reserved by Barbara Mooney © 2020
+      Barbara Mooney © 2020
     </footer>
-    
+    <script type="text/javascript">
+      var url = window.location;
+      var alertStatus = new URLSearchParams(url.search).get('alert');
+      if (alertStatus) {
+        alert('Thank you for your message. I will get back to you soon!');
+      }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src='script.js'></script>
   </body>
 </html>

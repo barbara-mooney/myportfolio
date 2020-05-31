@@ -19,7 +19,18 @@ app.get('/', (req, res) => {
 
 app.post('/submit', (req, res) => {
   mailer(req);
-  res.redirect('/');
+  res.redirect('/?alert=true');
 })
 
+app.get('/streeteats', (req, res) => {
+  res.sendFile(path.join(__dirname + '/streeteats.html'));
+});
+
+app.get('/todoapp', (req, res) => {
+  res.sendFile(path.join(__dirname + '/todoapp'));
+});
+
+app.get('/changecalculator', (req, res) => {
+  res.sendFile(path.join(__dirname + '/changecalculator'));
+});
 module.exports = app;
