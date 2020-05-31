@@ -2,6 +2,11 @@
   font-family: ;
   src: url(Montserrat-thin.ttf)
 } */
+
+* {
+  box-sizing: border-box;
+}
+
 body{
   background-color: white;
   margin: auto 0;
@@ -12,7 +17,7 @@ body{
 .navbar {
   display: flex;
   list-style: none;
-  font-size: 0.8rem;
+  font-size: 20px;
   margin: 0
 }
 
@@ -47,22 +52,28 @@ li {
   margin-right: 40px
 }
 
+.container {
+  text-align: center
+}
+
 .projectpagecontainer {
   display: grid;
   background-color: white;
-  margin-right: 40vh;
-  margin-left: 40vh;
+  width: 75%;
+  display: inline-block;
+  /* margin-right: 40vh;
+  margin-left: 40vh; */
   padding: 0.5vh;
 }
 
 .projectdescription {
   font-family: Quicksand;
-  font-size: 0.9rem;
+  font-size: 20px;
   color: #2f313d;
   text-align: left;
-  margin-right: 3.5vh;
-  margin-left: 3.5vh;
-  margin-bottom: 3vh;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
   line-height: 1.5;
 }
 
@@ -89,7 +100,7 @@ li {
 }
 
 .fa {
-  font-size: 1.8rem;
+  font-size: 32px;
 }
 
 .projectsbox {
@@ -99,10 +110,10 @@ li {
 .sectiontitle {
   font-family: Montserrat;
   color: #2f313d;
-  font-size: 1rem;
+  font-size: 24px;
   font-weight: bolder;
   margin-bottom: 1.5rem;
-  text-align: center;
+  /* text-align: center; */
   margin-top: 3rem;
 }
 
@@ -111,7 +122,7 @@ footer {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-family: Quicksand;
-  font-size: .7rem;
+  font-size: 16px;
   color: #2f313d;
 }
 
@@ -120,7 +131,7 @@ footer {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 45rem;
+  max-width: 75%;
   position: relative;
   margin: auto;
 }
@@ -131,7 +142,6 @@ footer {
 
 .mySlidePicStreetEats {
   height: 35rem;
-  max-width: 45rem;
   margin-bottom: 2vh;
   object-fit: cover
 }
@@ -142,35 +152,11 @@ footer {
   object-fit: cover
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
   text-align: center;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: #2f313d;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the 'next button' to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 10px;
@@ -186,12 +172,11 @@ footer {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  /* -webkit-animation-duration: 1s; */
   animation-name: fade;
-  animation-duration: 1.5s;
+  /* animation-duration: 1s; */
 }
 
 @-webkit-keyframes fade {

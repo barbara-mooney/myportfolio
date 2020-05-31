@@ -2,11 +2,17 @@
   font-family: ;
   src: url(Montserrat-thin.ttf)
 } */
+
+* {
+  box-sizing: border-box;
+}
+
 body{
   background-color: white;
   margin: auto 0;
   padding: 0;
   border-width: 0px;
+  display: block
 }
 
 div {
@@ -16,8 +22,8 @@ div {
 .box {
   background: #f9f9fb;
   border-bottom: 1px solid #e5e7e9;
-  height: 60vh;
-  margin: 0 0 5rem 0;
+  height: 650px;
+  margin: 0 0 4rem 0;
   position: relative;
 }
 
@@ -36,7 +42,7 @@ div {
 .navbar {
   display: flex;
   list-style: none;
-  font-size: 0.8rem;
+  font-size: 20px;
   margin: 0
 }
 
@@ -51,51 +57,31 @@ li {
   font-family: Quicksand;
 }
 
-@media only screen and (max-width: 600px) {
-  .navbar {
-    font-size: 0.5rem;
-    padding: 0
-  }
-}
-
 .push {
   margin-left: auto;
   margin-right: 40px
 }
 
 .mainbox {
-  margin-top: 16vh;
+  margin-top: 300px;
   text-align: center;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .myname {
   font-family: Montserrat;
   color: black;
   font-weight: bold;
-  font-size: 3rem;
-  padding: 2rem;
+  font-size: 3.5rem;
   margin-bottom: 2rem;
 }
 
 .mytitle {
   font-family: Quicksand;
   color: black;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 2vh;
-}
-
-@media only screen and (max-width: 600px) {
-  .myname {
-    font-size: 2rem;
-  }
-  .mainbox {
-    margin-top: 5vh;
-  }
-  .mytitle {
-    font-size: 1rem;
-  }
 }
 
 .hrline {
@@ -110,13 +96,11 @@ li {
 .grid-wrapperaboutme {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: auto 2.5fr;
-  grid-template-rows: minmax(12rem, auto);
-  margin-left: 100px;
-  margin-right: 100px;
-  width: 50%;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* grid-template-columns: repeat(25% 75%, minmax(100px, 1fr)); */
+  /* margin-left: 120px;
+  margin-right: 120px; */
   margin-bottom: 2rem;
-  justify-items: center;
 }
 
 .aboutmesection {
@@ -125,54 +109,45 @@ li {
   text-align: center;
 }
 
-.aboutme {
-  font-family: Quicksand; 
-  font-size: 0.8rem; 
-  color: #2f313d;
-  line-height: 1.5;
-  margin-left: 20vh;
-  margin-right: 20vh;
-}
-
 .mypicture > .item-gridaboutme {
   object-fit: cover;
 }
 
 .grid-itemaboutme {
-  display: grid;
-  width: 100%;
-  height: 100%;
+  justify-content: right;
+  text-align: right;
   color: #2f313d;
   font-family: Quicksand;
-  font-size: 0.8rem
+  font-size: 1.3rem;
+}
+
+.right {
+  justify-content: left;
 }
 
 .mypicture {
-  object-fit: cover;
-  height: 30vh;
-  margin-left: auto;
+  /* object-fit: cover; */
+  max-height: 30vh;
+  margin-right: 20px;
 }
 
 .aboutmeparag {
   margin: 0px;
   line-height: 1.5;
-  text-align: justify
-}
-
-.gridforprojects {
-  justify-items: center
+  text-align: justify;
+  padding-right: 20px;
+  padding-left: 20px
 }
 
 .grid-wrapper {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  margin-left: 3rem;
+  margin-right: 3rem;
   grid-gap: 25px;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: auto;
-  margin-left: 100px;
-  margin-right: 100px;
   margin-bottom: 2rem;
   justify-items: center;
-  text-align: center
+  text-align: center;
 }
 
 .grid-item > img {
@@ -180,11 +155,9 @@ li {
 }
 
 .grid-item {
-  /* display: grid; */
   width: 90%;
   height: auto;
   background-color: white;
-  /* margin: 5; */
   padding: 10px;
   box-shadow: 4px 4px 5px #888888;
 }
@@ -201,17 +174,16 @@ li {
   text-align: center;
   justify-content: center;
   margin: 0px;
-  padding-top: 20px
+  padding-top: 20px;
+  font-size: 1.5rem
 }
 
 .projectdescription {
   font-family: Quicksand;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   color: #2f313d;
   text-align: center;
   justify-content: center;
-  margin-right: 2rem;
-  margin-left: 2rem;
   line-height: 1.5;
   padding: 15px
 }
@@ -238,7 +210,7 @@ li {
 }
 
 .fa {
-  font-size: 1.8rem;
+  font-size: 32px;
 }
 
 .projectsbox {
@@ -248,7 +220,7 @@ li {
 .sectiontitle {
   font-family: Montserrat;
   color: #2f313d;
-  font-size: 1rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
   margin-top: 3rem;
@@ -267,7 +239,7 @@ li {
 .contacttitle{
   font-family: Montserrat;
   color: #2f313d;
-  font-size: 1rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
   margin-top: 0rem;
@@ -284,7 +256,8 @@ input[type=text], input[type=email], textarea {
   margin-bottom: 16px;
   resize: vertical;
   color: #2f313d;
-  font-family: Quicksand
+  font-family: Quicksand;
+  font-size: 20px
 }
 
 input[type=submit] {
@@ -294,7 +267,7 @@ input[type=submit] {
   border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 20px;
   margin: 4px;
   cursor: pointer;
   display: inline-block
@@ -313,13 +286,13 @@ input[type=submit]:hover {
 .formtitle {
   font-family: Montserrat;
   color: #2f313d;
-  font-size: 1rem;
+  font-size: 20px;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 form {
-  width: 40%;
+  width: 50%;
   display: inline-block;
   padding: 0 20px;
   /* background-color: #F9F9FB; */
@@ -330,7 +303,7 @@ form {
 
 .formlabel {
   font-family: Quicksand; 
-  font-size: 0.8rem;
+  font-size: 20px;
   color: #2f313d
 }
 
@@ -341,7 +314,7 @@ form {
 .submitbtn {
   font-family: Quicksand;
   color: white;
-  width: 7rem;
+  width: 10rem;
   background-color: #2f313d
 }
 
@@ -367,6 +340,96 @@ footer {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-family: Quicksand;
-  font-size: 10px;
+  font-size: 16px;
   color: #2f313d;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    font-size: 12px;
+    padding: 0
+  }
+  .box {
+    height: 300px;
+  }
+  .myname {
+    font-size: 1.5rem;
+    display: block
+  }
+  .mainbox {
+    margin-top: 5vh;
+  }
+  .mytitle {
+    font-size: 1rem;
+    display: block
+  }
+  .sectiontitle {
+    font-size: 1rem
+  }
+  .aboutmeparag {
+    font-size: 0.8rem
+  }
+  .formlabel {
+    font-size: 0.8rem
+  }
+  .forminput {
+    font-size: 0.8rem
+  }
+  .contacttitle {
+    font-size: 1rem
+  }
+  form {
+    width: 90%;
+    display: inline-block;
+    padding: 0 20px;
+    /* background-color: #F9F9FB; */
+    text-align: left;
+    border-radius: 5px;
+    margin-top: 0
+  }
+  .submitbtn {
+    font-size:1rem
+  }
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    grid-gap: 5px;
+    margin-bottom: 2rem;
+    justify-items: center;
+    text-align: center;
+  }
+  
+  .grid-item {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 4px 4px 5px #888888;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.1);
+    transition: all 1s
+  }
+  
+  .projecttitle {
+    font-family: Montserrat;
+    font-weight: bold;
+    color:#2f313d;
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+    padding-top: 20px;
+    font-size: 1rem
+  }
+  
+  .projectdescription {
+    font-family: Quicksand;
+    font-size: .8rem;
+    color: #2f313d;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 15px
+  }
 }
