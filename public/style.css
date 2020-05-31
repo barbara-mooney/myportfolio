@@ -274,7 +274,7 @@ li {
   font-weight: bolder
 }
 
-input[type=text], textarea {
+input[type=text], input[type=email], textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #2f313d;
