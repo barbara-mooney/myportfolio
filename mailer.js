@@ -13,8 +13,8 @@ module.exports = (request) => {
     const mailOptions = {
         from: `${request.body.email}`,
         to: process.env.SENDTO,
-        subject: `New message from ${request.body.namegit } ${request.body.email}`,
-        text: `Message body\n-------------\n${request.body.message}`
+        subject: `New message from ${request.body.email}`,
+        text: `Message body\n-------------\n from ${request.body.name}: ${request.body.message}`
     };
 
     //use the transporter to send a message with the specified settings
