@@ -22,7 +22,7 @@ div {
 .box {
   background: #f9f9fb;
   border-bottom: 1px solid #e5e7e9;
-  height: 650px;
+  height: 400px;
   margin: 0 0 4rem 0;
   position: relative;
 }
@@ -42,7 +42,7 @@ div {
 .navbar {
   display: flex;
   list-style: none;
-  font-size: 20px;
+  font-size: 14px;
   margin: 0
 }
 
@@ -51,7 +51,7 @@ div {
 }
 
 li {
-  padding: 20px;
+  padding: 16px;
   color: #2F313D;
   font-weight: 600;
   font-family: Quicksand;
@@ -63,7 +63,7 @@ li {
 }
 
 .mainbox {
-  margin-top: 300px;
+  margin-top: 125px;
   text-align: center;
   /* align-items: center; */
   /* justify-content: center; */
@@ -73,14 +73,14 @@ li {
   font-family: Montserrat;
   color: black;
   font-weight: bold;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
 .mytitle {
   font-family: Quicksand;
   color: black;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   margin-bottom: 2vh;
 }
 
@@ -93,50 +93,46 @@ li {
   background-image: linear-gradient(to right, white, rgba(0,0,0,.1), white);
 }
 
-.grid-wrapperaboutme {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  /* grid-template-columns: repeat(25% 75%, minmax(100px, 1fr)); */
-  /* margin-left: 120px;
-  margin-right: 120px; */
-  margin-bottom: 2rem;
+.flexcontainer {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-right: 3rem;
+  margin-left: 3rem
 }
 
-.aboutmesection {
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+.flexcontainer > picture {
+  text-align: right;
+}
+
+.flexcontainer > paragraph {
+  text-align: left;
 }
 
 .mypicture > .item-gridaboutme {
   object-fit: cover;
 }
 
-.grid-itemaboutme {
-  justify-content: right;
+.flex-itemaboutme {
   text-align: right;
   color: #2f313d;
   font-family: Quicksand;
-  font-size: 1.3rem;
-}
-
-.right {
-  justify-content: left;
 }
 
 .mypicture {
-  /* object-fit: cover; */
   max-height: 30vh;
-  margin-right: 20px;
+  justify-content: right;
+  text-align: right;
+  padding-right: 16px
 }
 
-.aboutmeparag {
+.aboutmeparagraph {
   margin: 0px;
+  font-size: 1rem;
   line-height: 1.5;
   text-align: justify;
-  padding-right: 20px;
-  padding-left: 20px
+  flex: 1;
+  margin-right: 3rem;
 }
 
 .grid-wrapper {
@@ -174,13 +170,13 @@ li {
   text-align: center;
   justify-content: center;
   margin: 0px;
-  padding-top: 20px;
-  font-size: 1.5rem
+  padding-top: 16px;
+  font-size: 1rem
 }
 
 .projectdescription {
   font-family: Quicksand;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   color: #2f313d;
   text-align: center;
   justify-content: center;
@@ -197,6 +193,7 @@ li {
 .linktoproject:hover {
   color: #2988BC;
 }
+
 .socialmedia a {
   margin-top: 0;
   border-radius: 100%;
@@ -220,7 +217,7 @@ li {
 .sectiontitle {
   font-family: Montserrat;
   color: #2f313d;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin-bottom: 1.5rem;
   text-align: center;
   margin-top: 3rem;
@@ -239,7 +236,17 @@ li {
 .contacttitle{
   font-family: Montserrat;
   color: #2f313d;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 0rem;
+  font-weight: bolder
+}
+
+.note{
+  font-family: Montserrat;
+  color: #2f313d;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
   text-align: center;
   margin-top: 0rem;
@@ -257,7 +264,7 @@ input[type=text], input[type=email], textarea {
   resize: vertical;
   color: #2f313d;
   font-family: Quicksand;
-  font-size: 20px
+  font-size: 14px
 }
 
 input[type=submit] {
@@ -267,7 +274,7 @@ input[type=submit] {
   border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 14px;
   margin: 4px;
   cursor: pointer;
   display: inline-block
@@ -283,27 +290,19 @@ input[type=submit]:hover {
   margin-top: 0
 }
 
-.formtitle {
-  font-family: Montserrat;
-  color: #2f313d;
-  font-size: 20px;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
 form {
   width: 50%;
   display: inline-block;
-  padding: 0 20px;
-  /* background-color: #F9F9FB; */
+  padding: 0 16px;
   text-align: left;
   border-radius: 5px;
   margin-top: 0
 }
 
+
 .formlabel {
   font-family: Quicksand; 
-  font-size: 20px;
+  font-size: 14px;
   color: #2f313d
 }
 
@@ -340,7 +339,7 @@ footer {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-family: Quicksand;
-  font-size: 16px;
+  font-size: 12px;
   color: #2f313d;
 }
 
@@ -366,8 +365,16 @@ footer {
   .sectiontitle {
     font-size: 1rem
   }
-  .aboutmeparag {
-    font-size: 0.8rem
+  .mypicture {
+    max-height: 20vh;
+    justify-content: center;
+    text-align: center;
+    padding: 5px
+  }
+  .aboutmeparagraph {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: justify;
   }
   .formlabel {
     font-size: 0.8rem
@@ -381,11 +388,13 @@ footer {
   form {
     width: 90%;
     display: inline-block;
-    padding: 0 20px;
-    /* background-color: #F9F9FB; */
+    padding: 0 16px;
     text-align: left;
     border-radius: 5px;
     margin-top: 0
+  }
+  .note{
+    font-size: 0.8rem;
   }
   .submitbtn {
     font-size:1rem
@@ -419,7 +428,7 @@ footer {
     text-align: center;
     justify-content: center;
     margin: 0px;
-    padding-top: 20px;
+    padding-top: 16px;
     font-size: 1rem
   }
   

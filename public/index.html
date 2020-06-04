@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel='stylesheet' href='style.css'>
   </head>
   <body>
@@ -23,7 +24,7 @@
       <header>
         <nav>
           <ul class='navbar'>
-            <li class='navlink push' id='contact'><a href='#contactsection' class='navitem'>Contact me</a></li>
+            <li class='navlink push' id='contact'><a href='#contactsection' class='navitem'></a></li>
           </ul>
         </nav>
       </header>
@@ -51,12 +52,21 @@
     </div>
     <div>
       <h3 class='sectiontitle' id='about'>ABOUT ME</h3>
-      <div class='grid-wrapperaboutme'>
-        <div class='grid-itemaboutme'><img src='./assets/mypicture.jpg' alt='picture of Barbara Mooney' class='mypicture'></div>
-        <div class='grid-itemaboutme right'>
-          <p class='aboutmeparag'>Hi! I'm Barbara, a full-stack developer based out of San Diego, California. 
-         </p> 
+      <div class='flexcontainer'>
+        <div style='flex-grow: 1' class='picture flex-itemaboutme'><img src='./assets/mypicture.jpg' alt='picture of Barbara Mooney' class='mypicture'></div>
+        <div style='flex-grow: 8' class='aboutmeparagraph flex-itemaboutme'>
+          <div>
+            Hi there! I am Barbara and I live in sunny San Diego in southern California! I am a developer eager to learn new things and take on new challenges every day. My ultimate goal is to develop code that is efficient, reliable, maintainable, and reusable over time, and more importantly, that users will love. Some of the technologies that I enjoy working with include JavaScript, React, Node, Express, MongoDB, and Loopback.
           </div>
+          </br>
+          <div>
+            I am interested in the entire spectrum of web development and working on challenging projects with energetic teams. 
+          </div>
+          </br>
+          <div>
+            Originally from Argentina, I am a fun of travelling and the outdoors. A tennis player, a yogi, an animal lover, and the mom of a beautiful boy. For more information about my professional experience download my <a href='./assets/Barbara Mooney_Resume.pdf' target='_blank' alt='Resume' class='linktoproject'>resume</a> or just <a href='#contactsection' class='linktoproject' >contact me</a> and I will be happy to connect!
+          </div>
+        </div>
       </div>
     </div>
     <hr class='hrline'>
@@ -74,7 +84,7 @@
           </div>
         </div>
         <div class='grid-item'>
-          <div class='projecttitle'>Change calculator: how much is due?</div>
+          <div class='projecttitle'>Change calculator: how much is it due?</div>
           <div class='projectdescription'>This is a simple change calculator built with React that calculates the change due for any given transaction. View more details <a href='changecalculator.html' alt='Link to the change calculator project page' class='linktoproject'>here</a>.
           </div>
         </div>
@@ -84,6 +94,7 @@
     <div class='form-div'>
       <form action="http://localhost:3000/submit" method="POST">
         <div class='contacttitle' id='contactsection'>CONTACT ME</div>
+        <div class='note'>(Note: I used Nodemailer to receive messages, which is great and super easy to set up. <a href='https://github.com/barbara-mooney/myportfolio/blob/master/mailer.js' alt='link to nodemailer source code' target='_blank' class='linktoproject'>Check out the source code here</a>.)</div>
         <div class='formlabel'>Please feel free to contact me. I would love to connect and discuss new opportunities and projects!</div></br>
         <label for='name' class='formlabel'>Name:</label>
         <input class='forminput' type='text' name='name' required>
@@ -116,14 +127,39 @@
     <footer>
       Barbara Mooney © 2020
     </footer>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var url = window.location;
       var alertStatus = new URLSearchParams(url.search).get('alert');
       if (alertStatus) {
         alert('Thank you for your message. I will get back to you soon!');
       }
+    </script> -->
+    <!-- <script type="text/javascript">
+      document.onreadystatechange = function(){
+        var url = window.location;
+        var alertStatus = new URLSearchParams(url.search).get('alert');
+        if(document.readyState=='loaded' && alertStatus || document.readyState=='complete' && alertStatus)
+              alert('Thank you for your message. I will get back to you soon!');
+      }
+      </script> -->
+    <!-- <script>
+      $(document).ready(function(){
+        var url = window.location;
+        var alertStatus = new URLSearchParams(url.search).get('alert');
+        if (alertStatus) {
+          alert('Thank you for your message. I will get back to you soon!');
+        }
+      });
+    </script> -->
+    <script type="text/javascript">
+      window.onload = function(){
+        var url = window.location;
+        var alertStatus = new URLSearchParams(url.search).get('alert');
+        if (alertStatus) {
+          alert('Thank you for your message. I will get back to you soon!');
+        }  
+      }
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src='script.js'></script>
   </body>
 </html>
