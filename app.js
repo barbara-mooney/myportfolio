@@ -18,17 +18,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/submit', (req, res) => {
-  // $.ajax({
-  //   url: 'https://barbaramooney.herokuapp.com/',
-  //   type: 'POST',
-  //   headers: {'Accept': 'application/json;'},
-  //   data: {
-  //     "subject": "Subject message",
-  //     "message": "body text"
-  //   },
-  //   }).done(function (res) {
-  //     console.log(res); // it shows your email sent message.
-  //   });
   mailer(req);
   res.redirect('/?alert=true');
 })
