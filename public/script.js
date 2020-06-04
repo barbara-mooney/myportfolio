@@ -12,15 +12,3 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 2500); // Change image every 2 seconds
 }
-
-$.ajax({
-  url: 'https://barbaramooney.herokuapp.com/',
-  type: 'POST',
-  headers: {'Accept': 'application/json;'},
-  data: {
-  "subject": "Subject message",
-  "message": "body text"
-  },
-  }).done(function (res) {
-    console.log(res); // it shows your email sent message.
-  });
