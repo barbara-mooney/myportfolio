@@ -23,8 +23,8 @@ app.post('/submit', (req, res) => {
     type: 'POST',
     headers: {'Accept': 'application/json;'},
     data: {
-    "subject": "Subject message",
-    "message": "body text"
+      "subject": "Subject message",
+      "message": "body text"
     },
     }).done(function (res) {
       console.log(res); // it shows your email sent message.
