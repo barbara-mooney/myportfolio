@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 
 app.post('/submit', (req, res) => {
   mailer(req);
+  console.log(req);
   res.redirect('/?alert=true');
 })
 

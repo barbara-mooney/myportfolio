@@ -13,7 +13,7 @@ module.exports = (request) => {
     const mailOptions = {
         from: `${request.body.email}`,
         to: process.env.SENDTO,
-        subject: `New message from ${request.body.name}`,
+        subject: `New message from ${request.body.email}`,
         text: `Message body\n-------------\n${request.body.message}`
     };
 
